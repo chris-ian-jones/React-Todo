@@ -26,7 +26,7 @@ class TodoForm extends React.Component {
     render() {
         return (
             <>
-                <p>placeholder Todo component</p>
+                {/* <p>placeholder Todo component</p> */}
                 <form onSubmit={this.addTodoHandler}>
                     <input 
                         onChange={this.changeInputHandler}
