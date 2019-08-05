@@ -38,12 +38,19 @@ class App extends React.Component {
       })
     }
 
+    toggleCompleted = id => {
+      console.log(id)
+    }
+
   render() {
     return (
       <div>
         <h2>Todo App!</h2>
         <TodoForm addTodo={this.addTodo}/>
-        <TodoList tasks={this.state.tasks}/>
+        <TodoList 
+          tasks={this.state.tasks}
+          toggleCompleted={this.toggleCompleted}
+        />
       </div>
     );
   }
