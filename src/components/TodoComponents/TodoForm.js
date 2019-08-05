@@ -1,4 +1,10 @@
 import React from 'react'
+import { Input, Button } from 'semantic-ui-react'
+import styled from 'styled-components'
+
+const StyledForm = styled.form`
+    margin: 50px auto 20px auto;
+`
 
 class TodoForm extends React.Component {
     constructor() {
@@ -25,15 +31,27 @@ class TodoForm extends React.Component {
     render() {
         return (
             <>
-                {/* <p>placeholder Todo component</p> */}
-                <form onSubmit={this.addTodoHandler}>
-                    <input 
+                <StyledForm onSubmit={this.addTodoHandler}>
+                    <Input 
+                        size='huge'
                         onChange={this.changeInputHandler}
                         value={this.state.input}
+                        placeholder='Enter task...'
                     />
-                    <button>Add Todo</button>
-                </form>
-                <button onClick={this.props.removeCompleted}>Clear Completed</button>
+                    <Button 
+                        positive 
+                        size='huge'
+                    >
+                    Add Todo
+                    </Button>
+                </StyledForm>
+                <Button 
+                    negative 
+                    size='huge'
+                    onClick={this.props.removeCompleted}
+                >
+                Clear Completed
+                </Button>
             </>
         )
     }

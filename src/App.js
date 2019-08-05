@@ -1,6 +1,23 @@
 import React from 'react';
 import TodoList from './components/TodoComponents/TodoList'
 import TodoForm from './components/TodoComponents/TodoForm'
+import styled from 'styled-components'
+
+const FlexCenterContainer = styled.div`
+  display: flex;
+  // width: 90vw;
+  // max-width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px;
+`
+const StyledTitle = styled.h1`
+  font-size: 3rem;
+  color: darkblue;
+  font-family: 'IBM Plex Mono', monospace;
+  margin: 0 auto 0 auto;
+`
 
 const tasks = [{}
   // {
@@ -61,8 +78,8 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
-        <h2>Todo App!</h2>
+      <FlexCenterContainer>
+        <StyledTitle>Todo!</StyledTitle>
         <TodoForm 
           addTodo={this.addTodo}
           removeCompleted={this.removeCompleted}
@@ -71,7 +88,7 @@ class App extends React.Component {
           tasks={this.state.tasks}
           toggleCompleted={this.toggleCompleted}
         />
-      </div>
+      </FlexCenterContainer>
     );
   }
 }
