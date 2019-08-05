@@ -4,9 +4,9 @@ const Todo = props => {
 
     return (
         <div>
-            <p>{props.id}</p>
+            {/* <p>{props.id}</p> */}
             <p>{props.task}</p>
-            <p>{props.completed.toString()}</p>
+            {/* <p>{props.completed.toString()}</p> */}
         </div>
     )
 }
