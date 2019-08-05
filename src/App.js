@@ -19,24 +19,18 @@ const StyledTitle = styled.h1`
   margin: 0 auto 0 auto;
 `
 
-const tasks = [{}
-  // {
-  //   task: 'Organize Garage',
-  //   id: 1528817077286,
-  //   completed: false
-  // },
-  // {
-  //   task: 'Bake Cookies',
-  //   id: 1528817084358,
-  //   completed: false
-  // }
-]
+const tasks = [{}]
+
+// const storageData = localStorage.getItem('taskData')
+// const tasks = JSON.parse(storageData)
 
 class App extends React.Component {
   // you will need a place to store your state in this component.
   // design `App` to be the parent component of your application.
   // this component is going to take care of state, and any change handlers you need to work with your state
-    constructor() {
+  
+
+  constructor() {
       super();
       this.state = {
         tasks
@@ -53,6 +47,8 @@ class App extends React.Component {
       this.setState({
         tasks: [...this.state.tasks, newTodo]
       })
+      // localStorage.getItem('taskData') && localStorage.removeItem('taskData')
+      // localStorage.setItem('taskData', JSON.stringify(this.state.tasks))
     }
 
     toggleCompleted = id => {
