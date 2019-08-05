@@ -14,12 +14,17 @@ class TodoForm extends React.Component {
         })
     }
 
+    addTodoHandler = event => {
+        event.preventDefault()
+        this.props.addTodo(this.state.input)
+    }
+
 
     render() {
         return (
             <>
                 <p>placeholder Todo component</p>
-                <form>
+                <form onSubmit={this.addTodoHandler}>
                     <input onChange={this.changeInputHandler}/>
                     <button>Add Todo</button>
                     <button>Clear Completed</button>
