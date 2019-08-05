@@ -4,10 +4,10 @@ const Todo = props => {
 
     return (
         <div
-            // className={`task${props.completed ? ' completed' : ''}`}
+            className={`task${props.completed ? ' completed' : ''}`}
             onClick={() => props.toggleCompleted(props.id)}
         >
-            <p>{props.task}</p>
+            {props.task}
             {/* <p>{props.completed.toString()}</p> */}
         </div>
     )

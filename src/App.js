@@ -39,7 +39,18 @@ class App extends React.Component {
     }
 
     toggleCompleted = id => {
-      console.log(id)
+      this.setState({
+        tasks: this.state.tasks.map(task => {
+          if (task.id === id) {
+            return {
+              ...task,
+              completed: !task.completed
+            }
+          } else {
+            return task
+          }
+        })
+      })
     }
 
   render() {
