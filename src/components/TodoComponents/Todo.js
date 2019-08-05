@@ -24,6 +24,7 @@ const Todo = props => {
 
     return (
         <div
+            // adding classname depending on tasks props, if competed is truthy
             className={`task${props.completed ? ' completed' : ''}`}
             onClick={() => props.toggleCompleted(props.id)}
         >

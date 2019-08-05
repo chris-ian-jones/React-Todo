@@ -29,7 +29,6 @@ class App extends React.Component {
   // design `App` to be the parent component of your application.
   // this component is going to take care of state, and any change handlers you need to work with your state
   
-
   constructor() {
       super();
       this.state = {
@@ -68,6 +67,7 @@ class App extends React.Component {
 
     removeCompleted = () => {
       this.setState({
+        // iterates of array of tasks, filtering for tasks where their completed value is not true
         tasks: this.state.tasks.filter(task => !task.completed)
       })
     }

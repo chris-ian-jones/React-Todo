@@ -20,6 +20,7 @@ class TodoForm extends React.Component {
         })
     }
 
+    // add handler using function passed in via props to add new task to array of task objects
     addTodoHandler = event => {
         event.preventDefault()
         this.props.addTodo(this.state.input)
