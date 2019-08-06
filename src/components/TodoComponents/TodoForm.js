@@ -2,8 +2,15 @@ import React from 'react'
 import { Input, Button } from 'semantic-ui-react'
 import styled from 'styled-components'
 
+const StyledContainer = styled.div`
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+`
 const StyledForm = styled.form`
     margin: 50px auto 20px auto;
+    display: flex;
 `
 
 class TodoForm extends React.Component {
@@ -31,7 +38,7 @@ class TodoForm extends React.Component {
 
     render() {
         return (
-            <>
+            <StyledContainer>
                 <StyledForm onSubmit={this.addTodoHandler}>
                     <Input 
                         size='huge'
@@ -53,7 +60,7 @@ class TodoForm extends React.Component {
                 >
                 Clear Completed
                 </Button>
-            </>
+            </StyledContainer>
         )
     }
 }

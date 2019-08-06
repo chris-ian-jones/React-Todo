@@ -5,8 +5,8 @@ import styled from 'styled-components'
 
 const FlexCenterContainer = styled.div`
   display: flex;
-  // width: 90vw;
-  // max-width: 100%;
+  width: 100vw;
+  max-width: 100%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
