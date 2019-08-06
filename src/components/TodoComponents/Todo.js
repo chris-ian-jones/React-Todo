@@ -5,11 +5,10 @@ import { Divider } from 'semantic-ui-react'
 const StyledContainer = styled.div`
     display: flex;
     align-items: center;
-    margin-bottom: 10px;
+    margin: 10px 0 10px 0;
 `
 
 const StyledRow = styled.div`
-    // height: 50px;
     width: 100vw;
     // border: 1px solid green;
     text-align: center;
@@ -20,7 +19,9 @@ const StyledTask = styled.p`
     color: darkblue;
     font-family: 'IBM Plex Mono', monospace;
     max-width: 100%;
+    margin: 0 2.5% 0 2.5%;
 `
+
 const Todo = props => {
 
     return (

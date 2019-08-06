@@ -9,6 +9,7 @@ const StyledContainer = styled.div`
     align-items: center;
     margin-bottom: 30px;
 `
+
 const StyledForm = styled.form`
     margin: 50px auto 20px auto;
     display: flex;

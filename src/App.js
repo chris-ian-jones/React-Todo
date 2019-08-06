@@ -12,6 +12,7 @@ const FlexCenterContainer = styled.div`
   align-items: center;
   margin-top: 60px;
 `
+
 const StyledTitle = styled.h1`
   font-size: 3rem;
   color: darkblue;
@@ -36,41 +37,41 @@ class App extends React.Component {
       }
     }
 
-    addTodo = newTask => {
-      const newTodo = {
-        task: newTask,
-        id: Date.now(),
-        completed: false
-      }
-
-      this.setState({
-        tasks: [...this.state.tasks, newTodo]
-      })
-      // localStorage.getItem('taskData') && localStorage.removeItem('taskData')
-      // localStorage.setItem('taskData', JSON.stringify(this.state.tasks))
+  addTodo = newTask => {
+    const newTodo = {
+      task: newTask,
+      id: Date.now(),
+      completed: false
     }
 
-    toggleCompleted = id => {
-      this.setState({
-        tasks: this.state.tasks.map(task => {
-          if (task.id === id) {
-            return {
-              ...task,
-              completed: !task.completed
-            }
-          } else {
-            return task
+    this.setState({
+      tasks: [...this.state.tasks, newTodo]
+    })
+    // localStorage.getItem('taskData') && localStorage.removeItem('taskData')
+    // localStorage.setItem('taskData', JSON.stringify(this.state.tasks))
+  }
+
+  toggleCompleted = id => {
+    this.setState({
+      tasks: this.state.tasks.map(task => {
+        if (task.id === id) {
+          return {
+            ...task,
+            completed: !task.completed
           }
-        })
+        } else {
+          return task
+        }
       })
-    }
+    })
+  }
 
-    removeCompleted = () => {
-      this.setState({
-        // iterates of array of tasks, filtering for tasks where their completed value is not true
-        tasks: this.state.tasks.filter(task => !task.completed)
-      })
-    }
+  removeCompleted = () => {
+    this.setState({
+      // iterates of array of tasks, filtering for tasks where their completed value is not true
+      tasks: this.state.tasks.filter(task => !task.completed)
+    })
+  }
 
   render() {
     return (
