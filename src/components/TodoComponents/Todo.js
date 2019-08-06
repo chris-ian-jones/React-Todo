@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Divider } from 'semantic-ui-react'
 
 const StyledContainer = styled.div`
     display: flex;
@@ -32,6 +33,7 @@ const Todo = props => {
                 <StyledTask>
                     {props.task}
                 </StyledTask>
+                <Divider />
             </StyledRow>
         </StyledContainer>
     )
