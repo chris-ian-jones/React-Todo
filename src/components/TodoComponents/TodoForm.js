@@ -9,7 +9,6 @@ const StyledContainer = styled.div`
   align-items: center;
   margin-bottom: 30px;
 `
-
 const StyledForm = styled.form`
   margin: 50px auto 20px auto;
   display: flex;
@@ -22,13 +21,11 @@ class TodoForm extends React.Component {
       input: ''
     }
   }
-
   changeInputHandler = event => {
     this.setState({
       input: event.target.value
     })
   }
-
   // add handler using function passed in via props to add new task to array of task objects
   addTodoHandler = event => {
     event.preventDefault()
@@ -37,7 +34,6 @@ class TodoForm extends React.Component {
       input: ''
     })
   }
-
   render() {
     return (
       <StyledContainer>
@@ -66,5 +62,4 @@ class TodoForm extends React.Component {
     )
   }
 }
-
 export default TodoForm

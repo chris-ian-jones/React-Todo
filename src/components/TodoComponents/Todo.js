@@ -7,13 +7,11 @@ const StyledContainer = styled.div`
   align-items: center;
   margin: 10px 0 10px 0;
 `
-
 const StyledRow = styled.div`
   width: 100vw;
   // border: 1px solid green;
   text-align: center;
 `
-
 const StyledTask = styled.p`
   font-size: 2rem;
   color: darkblue;
@@ -23,10 +21,9 @@ const StyledTask = styled.p`
 `
 
 const Todo = props => {
-
   return (
     <StyledContainer
-      // adding classname depending on tasks props, if competed is truthy
+      // adding classname depending on tasks props, if completed is truthy
       className={`task${props.completed ? ' completed' : ''}`}
       onClick={() => props.toggleCompleted(props.id)}
     >
@@ -39,5 +36,4 @@ const Todo = props => {
     </StyledContainer>
   )
 }
-
 export default Todo

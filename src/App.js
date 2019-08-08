@@ -12,7 +12,6 @@ const FlexCenterContainer = styled.div`
   align-items: center;
   margin-top: 60px;
 `
-
 const StyledTitle = styled.h1`
   font-size: 3rem;
   color: darkblue;
@@ -22,35 +21,23 @@ const StyledTitle = styled.h1`
 
 const tasks = [{}]
 
-// const storageData = localStorage.getItem('taskData')
-// const tasks = JSON.parse(storageData)
-
 class App extends React.Component {
-  // you will need a place to store your state in this component.
-  // design `App` to be the parent component of your application.
-  // this component is going to take care of state, and any change handlers you need to work with your state
-  
   constructor() {
     super();
     this.state = {
       tasks
     }
   }
-
   addTodo = newTask => {
     const newTodo = {
       task: newTask,
       id: Date.now(),
       completed: false
     }
-
     this.setState({
       tasks: [...this.state.tasks, newTodo]
     })
-    // localStorage.getItem('taskData') && localStorage.removeItem('taskData')
-    // localStorage.setItem('taskData', JSON.stringify(this.state.tasks))
   }
-
   toggleCompleted = id => {
     this.setState({
       tasks: this.state.tasks.map(task => {
@@ -65,14 +52,12 @@ class App extends React.Component {
       })
     })
   }
-
   removeCompleted = () => {
     this.setState({
       // iterates of array of tasks, filtering for tasks where their completed value is not true
       tasks: this.state.tasks.filter(task => !task.completed)
     })
   }
-
   render() {
     return (
       <FlexCenterContainer>
@@ -89,5 +74,4 @@ class App extends React.Component {
     );
   }
 }
-
 export default App;
